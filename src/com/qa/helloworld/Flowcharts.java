@@ -11,6 +11,7 @@ public class Flowcharts {
 //		loopTheLoop();
 
 //		loopTheLoopXtimes();
+
 		coins(4.58, 20.00);
 	}
 
@@ -143,7 +144,6 @@ public class Flowcharts {
 	static void coins(double cost, double amountPaid) {
 //		Need test to ensure amountPaid > cost
 
-		double change = 0.00;
 		double changeDue = amountPaid - cost;
 		int numTwenties = 0;
 		int numTenners = 0;
@@ -156,59 +156,49 @@ public class Flowcharts {
 		int numTwoPs = 0;
 		int numOnePs = 0;
 
-		while (changeDue > 0.00) {
-			if (changeDue / 20.00 >= 1) {
+		while (changeDue > 0.01) {
+			if (changeDue / 20.00 >= 1.00) {
 				numTwenties += 1;
-				change += 20.00;
 				changeDue -= 20.00;
-			} else if (changeDue / 10.00 >= 1) {
+			} else if (changeDue / 10.00 >= 1.00) {
 				numTenners += 1;
-				change += 10.00;
 				changeDue -= 10.00;
-			} else if (changeDue / 5.00 >= 1) {
+			} else if (changeDue / 5.00 >= 1.00) {
 				numFivers += 1;
-				change += 5.00;
 				changeDue -= 5.00;
-			} else if (changeDue / 1.00 >= 1) {
+			} else if (changeDue / 1.00 >= 1.00) {
 				numPounds += 1;
-				change += 1.00;
 				changeDue -= 1.00;
-			} else if (changeDue / 0.50 >= 1) {
+			} else if (changeDue / 0.50 >= 1.00) {
 				numFiftyPs += 1;
-				change += 0.50;
 				changeDue -= 0.50;
-			} else if (changeDue / 0.20 >= 1) {
+			} else if (changeDue / 0.20 >= 1.00) {
 				numTwentyPs += 1;
-				change += 0.20;
 				changeDue -= 0.20;
-			} else if (changeDue / 0.10 >= 1) {
+			} else if (changeDue / 0.10 >= 1.00) {
 				numTenPs += 1;
-				change += 0.10;
 				changeDue -= 0.10;
-			} else if (changeDue / 0.05 >= 1) {
+			} else if (changeDue / 0.05 >= 1.00) {
 				numFivePs += 1;
-				change += 0.05;
 				changeDue -= 0.05;
-			} else if (changeDue / 0.02 >= 1) {
+			} else if (changeDue / 0.02 >= 1.00) {
 				numTwoPs += 1;
-				change += 0.02;
 				changeDue -= 0.02;
-			} else if (changeDue / 0.01 >= 1) {
+			} else if (changeDue / 0.01 >= 1.00) {
 				numFivePs += 1;
-				change += 0.01;
 				changeDue -= 0.01;
 			}
 		}
 
-		System.out.println(numTwenties + " £20");
-		System.out.println(numTenners + " £10");
-		System.out.println(numFivers + " £5");
-		System.out.println(numPounds + " £1");
-		System.out.println(numFiftyPs + " 50p");
-		System.out.println(numTwentyPs + " 20p");
-		System.out.println(numTenPs + " 10p");
-		System.out.println(numFivePs + " 5p");
-		System.out.println(numTwoPs + " 2p");
-		System.out.println(numOnePs + " 1p");
+		System.out.println(numTwenties + "x £20");
+		System.out.println(numTenners + "x £10");
+		System.out.println(numFivers + "x £5");
+		System.out.println(numPounds + "x £1");
+		System.out.println(numFiftyPs + "x 50p");
+		System.out.println(numTwentyPs + "x 20p");
+		System.out.println(numTenPs + "x 10p");
+		System.out.println(numFivePs + "x 5p");
+		System.out.println(numTwoPs + "x 2p");
+		System.out.println(numOnePs + "x 1p");
 	}
 }
