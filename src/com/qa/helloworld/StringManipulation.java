@@ -6,10 +6,70 @@ public class StringManipulation {
 		String quoteDA = "\"In the beginning the Universe was created. "
 				+ "This has made a lot of people very angry and been widely regarded as a bad move.\"";
 		String nameDA = "Douglas Adams";
+
 		System.out.println("Number of words in: " + nameDA + " = " + numWords(nameDA));
 		System.out.println("Number of words in: " + quoteDA + " = " + numWords(quoteDA));
 
-		exercises();
+//		exercises();
+//		verticalPrint(quoteDA);
+//		reverseVerticalPrint(quoteDA);
+//		System.out.println(findMessage(quoteDA, "Universe was created"));
+		System.out.println(findMessage("Hello World!", "Hello"));
+	}
+
+	static boolean findMessage(String message, String text) {
+//		Return true if text is found in message
+//		Use only length(), substring() and equals() methods
+
+		int txtLen = text.length();
+		int msgLen = message.length();
+//		System.out.println(message + "length = " + message.length());
+		String sub = "";
+		for (int i = 0; i + txtLen <= msgLen; i += txtLen) {
+			sub = message.substring(i, message.length());
+			System.out.println(sub);
+			if (sub.equals(text)) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	static void reverseVerticalPrint(String text) {
+//		Print the words on separate lines in reverse order
+//		Use only length(), substring() and equals() methods
+		if (text.length() > 0) {
+
+			int endIndex = text.length();
+			for (int i = text.length(); i > 0; i--) {
+				String currentChar = text.substring(i - 1, i);
+
+				if (currentChar.equals(" ")) {
+					System.out.println(text.substring(i, endIndex));
+					endIndex = i - 1;
+				}
+			}
+			System.out.println(text.substring(0, endIndex));
+		}
+	}
+
+	static void verticalPrint(String text) {
+//		Print each of the  words on a separate line 
+//		Use only length(), substring() and equals() methods
+		if (text.length() > 0) {
+
+			int startIndex = 0;
+			for (int i = 0; i < text.length(); i++) {
+				String currentChar = text.substring(i, i + 1);
+
+				if (currentChar.equals(" ")) {
+					System.out.println(text.substring(startIndex, i + 1));
+					startIndex = i + 1;
+				}
+			}
+			System.out.println(text.substring(startIndex, text.length()));
+		}
 	}
 
 	static int numWords(String text) {
