@@ -16,6 +16,7 @@ public class StringManipulation {
 
 		System.out.println(findMessage("Hello World!", "World"));
 		System.out.println(findMessage("Hello World!", "World!"));
+		System.out.println(findMessage("Hello World!", "Spam"));
 		System.out.println(findMessage(quoteDA, "Universe was created"));
 
 	}
@@ -24,6 +25,8 @@ public class StringManipulation {
 //		Return true if text is found in message
 //		Use only length(), substring() and equals() methods
 
+		System.out.println("Finding " + text + " in " + message);
+
 		int txtLen = text.length();
 		int msgLen = message.length();
 		String sub = "";
@@ -31,7 +34,6 @@ public class StringManipulation {
 //		Work through the message in chunks of text.length()
 		for (int i = 0; i + txtLen <= msgLen; i++) {
 			sub = message.substring(i, i + txtLen);
-			System.out.println("Substring = " + sub);
 			if (sub.equals(text)) {
 				return true;
 			}
