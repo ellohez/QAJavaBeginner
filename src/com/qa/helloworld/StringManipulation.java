@@ -8,6 +8,8 @@ public class StringManipulation {
 		String nameDA = "Douglas Adams";
 		System.out.println("Number of words in: " + nameDA + " = " + numWords(nameDA));
 		System.out.println("Number of words in: " + quoteDA + " = " + numWords(quoteDA));
+
+		exercises();
 	}
 
 	static int numWords(String text) {
@@ -30,15 +32,16 @@ public class StringManipulation {
 		return count;
 	}
 
-	static void printVertical(String text) {
-//	Given a string, print out the string in a 
-//	vertical fashion, each word on a different line.
+	static void exercises() {
 
-		int wordIndex = 0;
+		String strOne = "yesterday it was raining";
+		String strTwo = "today it is sunny";
 
-		for (int i = 0; i < text.length(); i++) {
-			String currentChar = text.substring(i, i + 1);
-		}
+//		Exercise 1
+		String newStr = strTwo.toUpperCase() + ", " + strOne.toUpperCase();
+		System.out.println(newStr);
+
+//		Exercise 2
 
 	}
 
