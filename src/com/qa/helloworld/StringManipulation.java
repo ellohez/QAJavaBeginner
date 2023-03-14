@@ -13,8 +13,11 @@ public class StringManipulation {
 //		exercises();
 //		verticalPrint(quoteDA);
 //		reverseVerticalPrint(quoteDA);
-//		System.out.println(findMessage(quoteDA, "Universe was created"));
+
 		System.out.println(findMessage("Hello World!", "World"));
+		System.out.println(findMessage("Hello World!", "World!"));
+		System.out.println(findMessage(quoteDA, "Universe was created"));
+
 	}
 
 	static boolean findMessage(String message, String text) {
@@ -26,18 +29,12 @@ public class StringManipulation {
 		String sub = "";
 
 //		Work through the message in chunks of text.length()
-		for (int i = 0; i + txtLen <= msgLen + 1; i += txtLen) {
+		for (int i = 0; i + txtLen <= msgLen; i++) {
 			sub = message.substring(i, i + txtLen);
 			System.out.println("Substring = " + sub);
 			if (sub.equals(text)) {
 				return true;
 			}
-		}
-
-		sub = message.substring((msgLen - txtLen), msgLen);
-		System.out.println(sub);
-		if (sub.equals(text)) {
-			return true;
 		}
 
 		return false;
