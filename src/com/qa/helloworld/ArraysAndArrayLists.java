@@ -186,14 +186,6 @@ public class ArraysAndArrayLists {
 		}
 	}
 
-//	static void sqNum() {
-//
-//		for (int number : nums) {
-//			int sqNum = number * number;
-//			System.out.println(sqNum);
-//		}
-//	}
-
 	static void sqNum(int n) {
 
 		int sqNum = n * n;
@@ -215,7 +207,6 @@ public class ArraysAndArrayLists {
 	}
 
 	static void sqOrCube() {
-//	TODO - Using nums array, iterate through using and enhanced for loop
 //		if number is even cube and print it
 //		else if number is odd, square it and print it. 
 
