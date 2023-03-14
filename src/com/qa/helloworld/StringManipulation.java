@@ -42,7 +42,9 @@ public class StringManipulation {
 		System.out.println(newStr);
 
 //		Exercise 2
-
+		String shortStr = newStr.substring(0, newStr.indexOf("SUNNY"))
+				+ newStr.substring(newStr.indexOf("RAINING"), newStr.length());
+		System.out.println(shortStr);
 	}
 
 }
