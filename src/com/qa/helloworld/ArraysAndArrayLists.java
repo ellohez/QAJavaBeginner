@@ -7,7 +7,13 @@ import java.util.Scanner;
 
 public class ArraysAndArrayLists {
 
+	static int[] nums = new int[20];
+
 	public static void main(String[] args) {
+
+		for (int i = 0; i < 20; i++) {
+			nums[i] = i + 1;
+		}
 
 //		array1();
 //		array2();
@@ -15,7 +21,8 @@ public class ArraysAndArrayLists {
 //		System.out.println(intToString());
 //		System.out.println(intToStringExtended());
 
-		arrayListStuff();
+//		arrayListStuff();
+		sqOrCube();
 	}
 
 	static void array1() {
@@ -136,22 +143,91 @@ public class ArraysAndArrayLists {
 		}
 
 		if (faveColIndex > 0) {
-			System.out.println("First entry is: " + colourList.get(0));
+			System.out.println("---First entry is: " + colourList.get(0));
 			Collections.swap(colourList, 0, faveColIndex);
 //			Where is my favourite colour now?
+//			NOTE! Use of indexOf() method not get()
 			faveColIndex = colourList.indexOf("Purple");
-			System.out.println("Purple is number " + faveColIndex + " in the list");
+			System.out.println("---Purple is number " + faveColIndex + " in the list");
 		}
 
 //		Sorting using Collections helper methods
 		Collections.sort(colourList);
-//		Sorted!! ;-)
+		System.out.println("---Sorted!! ;-) ");
 
 //		Normal for loop
 		for (int i = 0; i < colourList.size(); i++) {
-			System.out.println("Index " + i + " Element = " + colourList[i]);
+			System.out.println("Index " + i + " = " + colourList.get(i));
 		}
 
+//		Sorted! in reverse
+		System.out.println();
+		System.out.println("---Reverse sort---");
+		Collections.reverse(colourList);
+		for (String colour : colourList) {
+			System.out.println(colour);
+		}
+
+//		Remove pink
+		System.out.println();
+		System.out.println("---Remove pink---");
+		colourList.remove(colourList.indexOf("Pink"));
+		for (String colour : colourList) {
+			System.out.println(colour);
+		}
+
+//		Change last element
+		System.out.println();
+		System.out.println("---Change last element");
+		colourList.set(colourList.size() - 1, "Orange");
+
+		for (String colour : colourList) {
+			System.out.println(colour);
+		}
+	}
+
+//	static void sqNum() {
+//
+//		for (int number : nums) {
+//			int sqNum = number * number;
+//			System.out.println(sqNum);
+//		}
+//	}
+
+	static void sqNum(int n) {
+
+		int sqNum = n * n;
+		System.out.println(sqNum);
+	}
+
+	static void cubeNum(int n) {
+
+		int cubeNum = n * n * n;
+		System.out.println(cubeNum);
+	}
+
+	static boolean isEven(int num) {
+
+		if (num % 2 == 0) {
+			return true;
+		}
+		return false;
+	}
+
+	static void sqOrCube() {
+//	TODO - Using nums array, iterate through using and enhanced for loop
+//		if number is even cube and print it
+//		else if number is odd, square it and print it. 
+
+		for (int number : nums) {
+			if (isEven(number)) {
+				System.out.println(number + " cubed is: ");
+				cubeNum(number);
+			} else {
+				System.out.println(number + " squared is: ");
+				sqNum(number);
+			}
+		}
 	}
 
 }
