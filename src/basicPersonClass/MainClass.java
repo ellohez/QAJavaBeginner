@@ -1,4 +1,4 @@
-package com.qa.classExercises;
+package basicPersonClass;
 
 import java.util.ArrayList;
 import java.util.List;

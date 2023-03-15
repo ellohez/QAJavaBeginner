@@ -1,4 +1,4 @@
-package com.qa.classExercises;
+package basicPersonClass;
 
 public class Person {
 
