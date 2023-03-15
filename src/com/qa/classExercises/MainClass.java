@@ -27,6 +27,10 @@ public class MainClass {
 		printList();
 
 		Person suspect = findPerson("Larry");
+		if (suspect != null) {
+			System.out.println("Found the suspect");
+			System.out.println(suspect.details());
+		}
 	}
 
 	static void printList() {
