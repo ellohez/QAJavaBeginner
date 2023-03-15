@@ -31,6 +31,15 @@ public class MainClass {
 			System.out.println("Found the suspect");
 			System.out.println(suspect.details());
 		}
+
+		p1.setAge(122);
+		System.out.println(p1.getAge());
+
+		p2.setName("Gordon");
+		System.out.println(p2.getName());
+
+		p3.setJobTitle("Doorman");
+		System.out.println(p1.getJobTitle());
 	}
 
 	static void printList() {
@@ -52,7 +61,7 @@ public class MainClass {
 
 		for (int i = 0; i < people.size(); i++) {
 
-			if (people.get(i).name.equals(name)) {
+			if (people.get(i).getName().equals(name)) {
 				System.out.println(people.get(i).toString());
 				return people.get(i);
 			}

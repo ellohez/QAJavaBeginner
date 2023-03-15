@@ -2,18 +2,46 @@ package com.qa.classExercises;
 
 public class Person {
 
-	int age = 0;
-	String name = null;
-	String jobTitle = null;
+	private int age = 0;
+	private String name = null;
+	private String jobTitle = null;
 
 	public Person() {
 	}
 
+	public void setAge(int age) {
+//		TODO test age is within sensible limits 
+		this.age = age;
+	}
+
+	public int getAge() {
+		return this.age;
+	}
+
+	public void setName(String name) {
+//		TODO test name string is sensible input
+		this.name = name;
+	}
+
+	public String getName() {
+//		TODO test name string is sensible input
+		return this.name;
+	}
+
+	public void setJobTitle(String jobTitle) {
+//		TODO test jobTitle is sensible input
+		this.jobTitle = jobTitle;
+	}
+
+	public String getJobTitle() {
+		return this.jobTitle;
+	}
+
 	public Person(String name, int age, String jobTitle) {
 
-		this.name = name;
-		this.age = age;
-		this.jobTitle = jobTitle;
+		this.setAge(age);
+		this.setName(name);
+		this.setJobTitle(jobTitle);
 	}
 
 	public String details() {
