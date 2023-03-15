@@ -23,11 +23,6 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return this.name;
+		return this.name + " " + this.age + " " + this.jobTitle;
 	}
-
-	public Person findPerson(String ) {
-		
-	}
-
 }

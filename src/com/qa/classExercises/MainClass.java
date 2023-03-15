@@ -8,6 +8,7 @@ public class MainClass {
 	private static Person p1;
 	private static Person p2;
 	private static Person p3;
+	private static List<Person> people;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -16,20 +17,23 @@ public class MainClass {
 		p2 = new Person("Gary", 23, "Dock worker");
 		p3 = new Person("Larry", 56, "Shop keeper");
 
-		printPeople();
-		printList();
-	}
+		people = new ArrayList<>();
 
-	static void printList() {
-
-		List<Person> people = new ArrayList<>();
 		people.add(p1);
 		people.add(p2);
 		people.add(p3);
 
-		for (int i = 0; i < people.size(); i++) {
+		printPeople();
+		printList();
 
-			System.out.println(people.get(i).details());
+		Person suspect = findPerson("Larry");
+	}
+
+	static void printList() {
+
+		for (Person p : people) {
+
+			System.out.println(p.details());
 		}
 	}
 
@@ -38,6 +42,18 @@ public class MainClass {
 		System.out.println(p1.details());
 		System.out.println(p2.details());
 		System.out.println(p3.details());
+	}
+
+	static Person findPerson(String name) {
+
+		for (int i = 0; i < people.size(); i++) {
+
+			if (people.get(i).name.equals(name)) {
+				System.out.println(people.get(i).toString());
+				return people.get(i);
+			}
+		}
+		return null;
 	}
 
 }
