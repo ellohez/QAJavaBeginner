@@ -52,8 +52,8 @@ public class Vehicle {
 
 	@Override
 	public String toString() {
-		String details = "Model: " + this.getModel() + "Num wheels: " + this.getNumWheels() + "Fuel type: "
-				+ this.getFuelType() + "Mph: " + this.getMph();
+		String details = "Model: " + this.getModel() + " " + "Num wheels: " + this.getNumWheels() + " " + "Fuel type: "
+				+ this.getFuelType() + " " + "Mph: " + this.getMph();
 		return details;
 	}
 

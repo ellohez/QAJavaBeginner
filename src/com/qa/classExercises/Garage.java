@@ -17,7 +17,7 @@ public class Garage {
 
 	public void printFleet() {
 		for (Vehicle v : fleet) {
-			v.toString();
+			System.out.println(v);
 		}
 	}
 }
