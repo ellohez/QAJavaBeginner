@@ -8,6 +8,13 @@ public class PaintWizard {
 //	List of paint objects
 	private List<Paint> paints = new ArrayList<>();
 
+	private Room = new Room();
+	
+//	Set up room
+	public void storeRoomDimensions() {
+		
+	}
+
 //	TODO - method to calculate the best to buy 
 //	given the size of a room (cheapest)
 

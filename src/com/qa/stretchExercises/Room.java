@@ -5,6 +5,16 @@ public class Room {
 	// Sum of all wall areas
 	private double roomArea = 0.0;
 
+	public Room() {
+//		Empty room - add dimensions later
+	}
+
+	public Room(double area1, double area2, double area3, double area4) {
+//		OR create if you know the wall dimensions, 
+//		create a room from those 
+		this.roomArea = area1 + area2 + area3 + area4;
+	}
+
 	public double calcWallArea(double w, double h) {
 		return w * h;
 	}
