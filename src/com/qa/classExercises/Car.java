@@ -4,16 +4,19 @@ public class Car extends Vehicle {
 
 	private int numSeats = 2;
 	private boolean hatchback = false;
+	private double costMOT = 70.00;
 
 	public Car() {
-		// TODO Auto-generated constructor stub
 		super();
 	}
 
 	public Car(String model, int numWheels, String fuelType, int mph) {
 		super(model, numWheels, fuelType, mph);
-		// TODO Auto-generated constructor stub
-		super.setCostMOT(70.00);
+	}
+
+	@Override
+	public double fixVehicle() {
+		return costMOT;
 	}
 
 	public int getNumSeats() {

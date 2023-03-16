@@ -1,13 +1,11 @@
 package com.qa.classExercises;
 
-public class Vehicle {
+public abstract class Vehicle {
 
 	private String model = null;
 	private int numWheels = 0; // TODO Make this default 4 in car etc
 	private String fuelType = null;
 	private int mph = 0;
-
-	private double costMOT = 50.00;
 
 	public Vehicle() {
 
@@ -20,13 +18,7 @@ public class Vehicle {
 		this.setMph(mph);
 	}
 
-	public double getCostMOT() {
-		return costMOT;
-	}
-
-	public void setCostMOT(double costMOT) {
-		this.costMOT = costMOT;
-	}
+	public abstract double fixVehicle();
 
 	public int getMph() {
 		return mph;
@@ -62,8 +54,9 @@ public class Vehicle {
 
 	@Override
 	public String toString() {
-		String details = "Model: " + this.getModel() + " " + "Num wheels: " + this.getNumWheels() + " " + "Fuel type: "
-				+ this.getFuelType() + " " + "Mph: " + this.getMph();
+		String type = this.getClass().getSimpleName().toUpperCase();
+		String details = "[" + type + ", Model: " + this.getModel() + ", " + "Num wheels: " + this.getNumWheels() + ", "
+				+ "Fuel type: " + this.getFuelType() + ", " + "Mph: " + this.getMph() + "]";
 		return details;
 	}
 

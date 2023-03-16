@@ -4,6 +4,7 @@ public class Van extends Vehicle {
 
 	private boolean white = true;
 	private int sqMeters = 0;
+	private double costMOT = 100.00;
 
 	public Van() {
 		// TODO Auto-generated constructor stub
@@ -11,8 +12,11 @@ public class Van extends Vehicle {
 
 	public Van(String model, int numWheels, String fuelType, int mph) {
 		super(model, numWheels, fuelType, mph);
-		// TODO Auto-generated constructor stub
-		super.setCostMOT(100.00);
+	}
+
+	@Override
+	public double fixVehicle() {
+		return costMOT;
 	}
 
 	public boolean isWhite() {

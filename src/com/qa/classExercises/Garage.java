@@ -27,13 +27,13 @@ public class Garage {
 	}
 
 	public double fixVehicle(Vehicle brum) {
-		return brum.getCostMOT();
+		return brum.fixVehicle();
 	}
 
 	public double fixAll() {
 		double sum = 0.00;
 		for (Vehicle v : this.fleet) {
-			sum += v.getCostMOT();
+			sum += v.fixVehicle();
 		}
 		return sum;
 	}
