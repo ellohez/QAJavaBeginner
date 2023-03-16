@@ -2,8 +2,8 @@ package com.qa.classExercises;
 
 public class Motorbike extends Vehicle {
 
-	boolean cruiser = false;
-	String seatType = null;
+	private boolean cruiser = false;
+	private String seatType = null;
 
 	public Motorbike() {
 		// TODO Auto-generated constructor stub
@@ -12,6 +12,7 @@ public class Motorbike extends Vehicle {
 	public Motorbike(String model, int numWheels, String fuelType, int mph) {
 		super(model, numWheels, fuelType, mph);
 		// TODO Auto-generated constructor stub
+		super.setCostMOT(40.00);
 	}
 
 	public boolean isCruiser() {

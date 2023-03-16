@@ -7,6 +7,8 @@ public class Vehicle {
 	private String fuelType = null;
 	private int mph = 0;
 
+	private double costMOT = 50.00;
+
 	public Vehicle() {
 
 	}
@@ -16,6 +18,14 @@ public class Vehicle {
 		this.setNumWheels(numWheels);
 		this.setFuelType(fuelType);
 		this.setMph(mph);
+	}
+
+	public double getCostMOT() {
+		return costMOT;
+	}
+
+	public void setCostMOT(double costMOT) {
+		this.costMOT = costMOT;
 	}
 
 	public int getMph() {

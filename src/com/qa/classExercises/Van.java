@@ -2,8 +2,8 @@ package com.qa.classExercises;
 
 public class Van extends Vehicle {
 
-	boolean white = true;
-	int sqMeters = 0;
+	private boolean white = true;
+	private int sqMeters = 0;
 
 	public Van() {
 		// TODO Auto-generated constructor stub
@@ -12,6 +12,7 @@ public class Van extends Vehicle {
 	public Van(String model, int numWheels, String fuelType, int mph) {
 		super(model, numWheels, fuelType, mph);
 		// TODO Auto-generated constructor stub
+		super.setCostMOT(100.00);
 	}
 
 	public boolean isWhite() {
