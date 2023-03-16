@@ -2,6 +2,7 @@ package com.qa.stretchExercises;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class PaintWizard {
 
@@ -12,7 +13,30 @@ public class PaintWizard {
 
 //	Set up room
 	public void storeRoomDimensions() {
+		double width = 0.00;
+		double height = 0.00;
+		Scanner scan = new Scanner(System.in);
 
+		System.out.println("Room set up");
+
+		for (int i = 1; i < 5; i++) {
+			System.out.println("Please enter the width of wall number " + i + " : ");
+			width = scan.nextDouble();
+
+			System.out.println("Please enter the height of wall number " + i + " : ");
+			height = scan.nextDouble();
+
+			myRoom.addWallArea(width, height);
+
+		}
+	}
+
+	public List<Paint> getPaints() {
+		return paints;
+	}
+
+	public void setPaints(List<Paint> paints) {
+		this.paints = paints;
 	}
 
 //	TODO - method to calculate the best to buy 

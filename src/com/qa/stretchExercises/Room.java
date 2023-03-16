@@ -15,6 +15,14 @@ public class Room {
 		this.roomArea = area1 + area2 + area3 + area4;
 	}
 
+	public double getRoomArea() {
+		return roomArea;
+	}
+
+	public void setRoomArea(double roomArea) {
+		this.roomArea = roomArea;
+	}
+
 	public double calcWallArea(double w, double h) {
 		return w * h;
 	}
