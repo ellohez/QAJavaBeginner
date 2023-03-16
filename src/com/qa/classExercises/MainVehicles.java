@@ -31,6 +31,12 @@ public class MainVehicles {
 
 		System.out.println("Fix all vehicles: ");
 		System.out.println("Bill: £" + myGarage.fixAll());
+
+		if (myGarage.emptyGarage()) {
+			System.out.println("I hate cars");
+			myGarage.printFleet();
+			System.out.println("sold them all!");
+		}
 	}
 
 }

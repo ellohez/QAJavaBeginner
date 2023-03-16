@@ -11,11 +11,6 @@ public class Garage {
 		// TODO Auto-generated constructor stub
 	}
 
-	public boolean emptyGarage() {
-
-		return false;
-	}
-
 	public void add(Vehicle brumBrum) {
 		this.fleet.add(brumBrum);
 	}
@@ -28,7 +23,6 @@ public class Garage {
 
 	// Remove a vehicle by it's type
 	public void removeVehicles(String type) {
-
 		this.fleet.removeIf(vehicle -> vehicle.getClass().getSimpleName().equalsIgnoreCase(type));
 	}
 
@@ -37,7 +31,6 @@ public class Garage {
 	}
 
 	public double fixAll() {
-
 		double sum = 0.00;
 		for (Vehicle v : this.fleet) {
 			sum += v.getCostMOT();
@@ -45,4 +38,8 @@ public class Garage {
 		return sum;
 	}
 
+	public boolean emptyGarage() {
+		fleet = new ArrayList<>();
+		return fleet.isEmpty();
+	}
 }
