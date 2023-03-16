@@ -12,7 +12,7 @@ public class PaintWizard {
 	private Room myRoom = new Room();
 
 //	Set up room
-	public void storeRoomDimensions() {
+	public double storeRoomDimensions() {
 		double width = 0.00;
 		double height = 0.00;
 		Scanner scan = new Scanner(System.in);
@@ -27,8 +27,9 @@ public class PaintWizard {
 			height = scan.nextDouble();
 
 			myRoom.addWallArea(width, height);
-
 		}
+
+		return myRoom.getRoomArea();
 	}
 
 	public List<Paint> getPaints() {
