@@ -1,4 +1,4 @@
-package basicPersonClass;
+package com.qa.basicPersonClass;
 
 public class Person {
 

@@ -1,4 +1,4 @@
-package basicPersonClass;
+package com.qa.basicPersonClass;
 
 import java.util.ArrayList;
 import java.util.List;
