@@ -7,7 +7,7 @@ public class RPSRunner {
 
 		RPSGame game = new RPSGame();
 		Scanner input = new Scanner(System.in);
-		System.out.println("Please choose from " + RPS.ROCK + RPS.PAPER + RPS.SCISSORS);
+
 		System.out.println("Enter 1 for " + RPS.ROCK);
 		System.out.println("Enter 2 for " + RPS.PAPER);
 		System.out.println("Enter 3 for " + RPS.SCISSORS);
