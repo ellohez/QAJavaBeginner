@@ -6,11 +6,9 @@ public class RPSGame {
 
 	public boolean playRPS(RPS choice) {
 
-//		return choice == this.computerChoice();
-
-//		Multiline version with test output
 		RPS pcChoice = this.computerChoice();
 		System.out.println("Deep thought chose: " + pcChoice);
+
 		return choice == pcChoice;
 
 	}

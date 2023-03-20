@@ -23,6 +23,11 @@ public class RPSRunner {
 			rpsChoice = RPS.SCISSORS;
 		}
 
-		System.out.println("You chose: " + rpsChoice + " You win = " + game.playRPS(RPS.PAPER));
+		boolean result = game.playRPS(rpsChoice);
+		System.out.print("You chose: " + rpsChoice);
+		if (result != true && result != false)
+			System.out.print(" it was a draw!");
+		else
+			System.out.println(" You won = " + result);
 	}
 }
