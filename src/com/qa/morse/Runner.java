@@ -9,6 +9,8 @@ public class Runner {
 		System.out.println(translator.translate(".--- .- ...- .- / .. ... / -.-. --- --- .-.. / --- -.-"));
 
 		System.out.println(translator.translate(".... . .-.. . -."));
+
+		System.out.println(translator.toMorse("MATT"));
 	}
 
 }

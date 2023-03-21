@@ -2,6 +2,7 @@ package com.qa.morse;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class MorseTranslator {
 
@@ -47,16 +48,6 @@ public class MorseTranslator {
 		this.codes.put("-----", "0");
 	}
 
-	public String toMorse(String plainTxt) {
-//		Convert string to string array - split at space or /
-		String[] ary = plainTxt.split("\\s+");
-
-		for (int i = 0; i < ary.length; i++) {
-//			if()
-//			codes.entrySet().contain;
-		}
-	}
-
 	public String translate(String morse) {
 
 //		Convert string to string array - split at space or /
@@ -68,7 +59,32 @@ public class MorseTranslator {
 			if (ary[i].contains("/"))
 				result += " ";
 			else
-				result += codes.get(ary[i]);
+				result += this.codes.get(ary[i]);
+		}
+
+		return result;
+	}
+
+	public String toMorse(String plainTxt) {
+//		Convert string to string array - split at space or /
+		String[] ary = plainTxt.split("");
+		String result = "";
+
+//		Get the set of entry pairs <key, value>
+		Set<Map.Entry<String, String>> entries = this.codes.entrySet();
+
+		for (int i = 0; i < ary.length; i++) {
+			if (ary[i] == " ")
+				result += " ";
+			else {
+//				Iterate through the entries searching for the letter
+				for (Map.Entry<String, String> entry : entries) {
+//					System.out.println(i + " : " + ary[i] + " code: " + entry.getValue()); // For testing
+					if (entry.getValue().equals(ary[i]))
+//						If letter exists in map, add key (morse code) for that letter
+						result += entry.getKey() + " ";
+				}
+			}
 		}
 
 		return result;
