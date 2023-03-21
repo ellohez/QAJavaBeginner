@@ -1,4 +1,4 @@
-package com.qa.basicPersonClass;
+package com.qa.rpsgame;
 
 public enum RPS {
 	ROCK, PAPER, SCISSORS;
