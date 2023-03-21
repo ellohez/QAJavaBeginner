@@ -13,6 +13,9 @@ public class RPSRunner {
 		System.out.println("Enter 3 for " + RPS.SCISSORS);
 
 		int uChoice = input.nextInt();
+
+//		TODO use RPS array to convert int to choice
+//		RPS.valueOf(uChoice);
 		RPS rpsChoice = RPS.ROCK;
 		switch (uChoice) {
 		case 1:
@@ -23,6 +26,7 @@ public class RPSRunner {
 			rpsChoice = RPS.SCISSORS;
 		}
 
+//		This should return a result enum value
 		boolean result = game.playRPS(rpsChoice);
 		System.out.print("You chose: " + rpsChoice);
 		if (result != true && result != false)
