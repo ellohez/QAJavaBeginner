@@ -47,6 +47,16 @@ public class MorseTranslator {
 		this.codes.put("-----", "0");
 	}
 
+	public String toMorse(String plainTxt) {
+//		Convert string to string array - split at space or /
+		String[] ary = plainTxt.split("\\s+");
+
+		for (int i = 0; i < ary.length; i++) {
+//			if()
+//			codes.entrySet().contain;
+		}
+	}
+
 	public String translate(String morse) {
 
 //		Convert string to string array - split at space or /
@@ -54,7 +64,7 @@ public class MorseTranslator {
 
 		String result = "";
 		for (int i = 0; i < ary.length; i++) {
-			System.out.println(i + " : " + ary[i]);
+//			System.out.println(i + " : " + ary[i]); For testing
 			if (ary[i].contains("/"))
 				result += " ";
 			else
