@@ -16,12 +16,8 @@ public class RPSGame {
 	private RPS computerChoice() {
 		Random rand = new Random();
 
-		int randInt = rand.nextInt(150);
-		if (randInt < 50)
-			return RPS.PAPER;
-		else if (randInt > 50 && randInt < 100)
-			return RPS.SCISSORS;
-		else
-			return RPS.ROCK;
+		int randInt = rand.nextInt(3);
+
+		return RPS.values()[randInt];
 	}
 }
