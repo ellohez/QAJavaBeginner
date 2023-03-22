@@ -16,15 +16,7 @@ public class RPSRunner {
 
 //		TODO use RPS array to convert int to choice
 //		RPS.valueOf(uChoice);
-		RPS rpsChoice = RPS.ROCK;
-		switch (uChoice) {
-		case 1:
-			rpsChoice = RPS.ROCK;
-		case 2:
-			rpsChoice = RPS.PAPER;
-		case 3:
-			rpsChoice = RPS.SCISSORS;
-		}
+		RPS rpsChoice = RPS.values()[uChoice];
 
 //		This should return a result enum value
 		boolean result = game.playRPS(rpsChoice);
