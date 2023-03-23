@@ -37,6 +37,25 @@ public class MainVehicles {
 			myGarage.printFleet();
 			System.out.println("sold them all!");
 		}
+
+//		VehiceContainer is a generic that takes any type of object as 
+//		that inherits from Vehicle
+		VehicleContainer<Motorbike> bikeStore = new VehicleContainer<>();
+
+		bikeStore.setVehicle(harley);
+		Motorbike v = bikeStore.getVehicle();
+		System.out.println("My bike: " + v);
+
+//		Also valid to use Vehicle still 
+		VehicleContainer<Vehicle> store = new VehicleContainer<>();
+		store.setVehicle(kia);
+		Vehicle v1 = store.getVehicle();
+		System.out.println("Vehicle: " + v1 + "Fixed for " + v1.fixVehicle());
+		System.out.println(v1.getClass().getSimpleName());
+
+//		As VehicleContainer only takes any type that extends Vehicle
+//		The statement below does not compute.
+//		VehicleContainer<String s> testStore = new VehicleContainer<>();
 	}
 
 }
